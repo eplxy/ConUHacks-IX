@@ -1,21 +1,31 @@
 import { useState } from "react";
+import { Line } from "../models/models";
 
-export default function DialogueBox({ dialogue, onChoice }) {
+export interface IDialogueBoxProps {
+  dialogue: Line[];
+  onChoice: (nextSceneId: string) => void;
+}
+
+export default function DialogueBox(props: IDialogueBoxProps) {
   const [index, setIndex] = useState(0);
-  const currentLine = dialogue[index];
+  const currentLine: Line = props.dialogue[index];
 
   const nextLine = () => {
-    if (index < dialogue.length - 1) {
+    if (index < props.dialogue.length - 1) {
       setIndex(index + 1);
     }
   };
 
   return (
     <div className="dialogue-box">
-      <p>{currentLine.speaker}: {currentLine.text}</p>
-      {currentLine.choices ? (
+      {currentLine && (
+        <p>
+          {currentLine.speaker}: {currentLine.text}
+        </p>
+      )}
+      {currentLine && currentLine.choices ? (
         currentLine.choices.map((choice, idx) => (
-          <button key={idx} onClick={() => onChoice(choice.next)}>
+          <button key={idx} onClick={() => props.onChoice(choice.next)}>
             {choice.text}
           </button>
         ))

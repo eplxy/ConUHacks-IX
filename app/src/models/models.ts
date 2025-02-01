@@ -1,23 +1,23 @@
-export type Character {
-  name: string;
-  sprite: string;
-  position: string;
-}
-
-export type Choice {
+export interface Choice {
   text: string;
-  next: string;
+  next: string; // next scene id
 }
 
-export type Dialogue {
+export interface Line {
   speaker: string;
   text: string;
   choices?: Choice[];
 }
 
-export type Scene {
+export interface Character {
+  name: string;
+  sprite?: string;
+  position?: string;
+}
+
+export interface Scene {
   id: string;
-  background: string;
+  background?: string;
   characters: Character[];
-  dialogue: Dialogue[];
+  dialogue: Line[];
 }
