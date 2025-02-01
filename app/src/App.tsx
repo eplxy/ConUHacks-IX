@@ -1,19 +1,19 @@
 import SceneManager from "./components/SceneManager";
 import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import MainMenu from "./components/MainMenu";
+import ResultsPage from "./components/ResultsPage";
 
 function App() {
   return (
     <>
-      <SceneManager />
-      <h1>Vite + React</h1>
-      <div className="card">
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Router>
+        <Routes>
+          <Route path="/" element={<MainMenu />} />
+          <Route path="/results" element={<ResultsPage />} />
+          <Route path="/game" element={<SceneManager />} />
+        </Routes>
+      </Router>
     </>
   );
 }
