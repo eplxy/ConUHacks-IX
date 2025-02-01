@@ -1,0 +1,23 @@
+.scene {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+  }
+  
+  .character {
+    position: absolute;
+    bottom: 10%;
+    max-height: 60%;
+  }
+  
+  .dialogue-box {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+  }
+  
