@@ -67,7 +67,7 @@ export default function DialogueBox(props: IDialogueBoxProps) {
     >
       <Box
         sx={{
-          margin: "10% auto",
+          margin: "10% 0px 10% 45%",
           width: "40%",
           display: areChoicesVisible ? "flex" : "none",
           flexDirection: "column",
@@ -133,13 +133,10 @@ export default function DialogueBox(props: IDialogueBoxProps) {
       {currentLine?.speaker && (
         <div
           style={{
-            width: 175,
+            width: 300,
             height: 60,
-            paddingLeft: 51,
-            paddingRight: 51,
-            paddingTop: 18,
-            paddingBottom: 18,
-            left: "3%",
+            padding: "18px 20px",
+            left: "5%",
             top: "62%",
             position: "absolute",
             transform: "rotate(-3deg)",

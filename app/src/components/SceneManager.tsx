@@ -114,7 +114,7 @@ export default function SceneManager() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           transition: "background-image 0.5s ease-in-out",
-          filter: "blur(8px)",
+          filter: "blur(4px)",
         }}
         sx={{ alignItems: "flex-end", zIndex: 10 }}
       ></Box>
@@ -124,7 +124,8 @@ export default function SceneManager() {
             userSelect: "none",
             position: "absolute",
             height: "100%",
-            right: "10%",
+            left: "5%",
+            // right: "10%",
             zIndex: 50,
           }}
           src={`${DEFAULT_CHARACTERS_FOLDER_PATH}${currentSprite}`}
