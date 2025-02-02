@@ -67,8 +67,8 @@ export default function DialogueBox(props: IDialogueBoxProps) {
     >
       <Box
         sx={{
-          margin: "10% 0px 10% 45%",
-          width: "40%",
+          margin: "10% 0px 10% 50%",
+          width: "35%",
           display: areChoicesVisible ? "flex" : "none",
           flexDirection: "column",
           justifyContent: "space-between",

@@ -124,8 +124,7 @@ export default function SceneManager() {
             userSelect: "none",
             position: "absolute",
             height: "100%",
-            left: "5%",
-            // right: "10%",
+            left: "10%",
             zIndex: 50,
           }}
           src={`${DEFAULT_CHARACTERS_FOLDER_PATH}${currentSprite}`}
