@@ -1,0 +1,77 @@
+
+/* Background styling */
+.main-menu-container {
+    position: relative;
+    height: 100vh;
+    background-color: #f8bbd0; /* bg-pink-200 */
+    overflow: hidden; 
+  }
+  
+  /* Right Column: Game Logo */
+  .main-menu-logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Ensures the image fits within the screen without cropping */
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+  /* Left Column: Menu Items */
+  .menu-items {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    width: 25%;
+    padding: 1.5rem;
+  }
+  
+  /* Button styling */
+  .menu-button {
+    background-color: #d81b60;
+    font-weight: bold;
+  }
+  
+  /* Popup Styles */
+  .popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Credits Popup */
+  .popup-content {
+    background-color: #ea708c;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Gallery Popup */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .gallery-image {
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+  }
+  
