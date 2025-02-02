@@ -1,7 +1,7 @@
 [
     {
-      "id": "a2",
-      "background": "2a.png",
+      "id": "a3",
+      "background": "3a.png",
       "characters": [
         {
           "name": "Marigela",
@@ -69,27 +69,27 @@
           "choices": [
             {
               "text": "Stay out in the rain, staring at the sky.",
-              "next": "a2-gangus",
+              "next": "a3-gangus",
               "traitChanges": [{ "trait": 5, "change": 1 }]
             },
             {
               "text": "Panic, get lost, and sleep in an exposed alley.",
-              "next": "a2-darius",
+              "next": "a3-darius",
               "traitChanges": [{ "trait": 4, "change": 1 }]
             },
             {
               "text": "Curl up in a cozy spot under a tree.",
-              "next": "a2-cashmere",
+              "next": "a3-cashmere",
               "traitChanges": [{ "trait": 1, "change": 1 }]
             },
             {
               "text": "Find the driest, safest, and most structurally sound shelter.",
-              "next": "a2-calpico",  
+              "next": "a3-calpico",  
               "traitChanges": [{ "trait": 3, "change": 1 }]
             },
             {
               "text": "Claim a dry crate and push anyone else out",
-              "next": "a2-margiela",
+              "next": "a3-margiela",
               "traitChanges": [{ "trait": 2, "change": 1 }]
             }
           ]
@@ -97,8 +97,9 @@
       ]
     },
     {
-      "id": "a2-cashmere",
-      "background": "2a.png",
+      "id": "a3-cashmere",
+      "background": "3a.png",
+      "nextSceneId": "a3-end",
       "characters": [{ "name": "Cashmere", "sprite": "cashmere.png" }],
       "dialogue": [
         {
@@ -107,13 +108,15 @@
         },
         {
           "speaker": "Cashmere",
-          "text": "Oh, we chose the same spot. Nice to see you again!"
+          "text": "Oh, we chose the same spot. Nice to see you again!",
+          "nextSceneId": "a3-end"
         }
       ]
     },
     {
-      "id": "a2-margiela",
-      "background": "2a.png",
+      "id": "a3-margiela",
+      "background": "3a.png",
+      "nextSceneId": "a3-end",
       "characters": [{ "name": "", "sprite": "margiela.png" }],
       "dialogue": [
         {
@@ -122,13 +125,15 @@
         },
         {
           "speaker": "Marigela",
-          "text": "Now that’s how you get what you want."
+          "text": "Now that’s how you get what you want.",
+          "nextSceneId": "a3-end"
         }
       ]
     },
     {
-      "id": "a2-calpico",
-      "background": "2a.png",
+      "id": "a3-calpico",
+      "background": "3a.png",
+      "nextSceneId": "a3-end",
       "characters": [{ "name": "calpico", "sprite": "calpico.png" }],
       "dialogue": [
         {
@@ -137,13 +142,15 @@
         },
         {
           "speaker": "Calpico",
-          "text": "Well Done. You learn fast."
+          "text": "Well Done. You learn fast.",
+          "nextSceneId": "a3-end"
         }
       ]
     },
     {
-      "id": "a2-darius",
-      "background": "2a.png",
+      "id": "a3-darius",
+      "background": "3a.png",
+      "nextSceneId": "a3-end",
       "characters": [{ "name": "", "sprite": "darius.png" }],
       "dialogue": [
         {
@@ -152,13 +159,15 @@
         },
         {
           "speaker": "Darius",
-          "text": "You’ll be okay. Let’s go find the others."
+          "text": "You’ll be okay. Let’s go find the others.",
+          "nextSceneId": "a3-end"
         }
       ]
     },
     {
-      "id": "a2-gangus",
-      "background": "2a.png",
+      "id": "a3-gangus",
+      "background": "3a.png",
+      "nextSceneId": "a3-end",
       "characters": [{ "name": "", "sprite": "gangus.png" }],
       "dialogue": [
         {
@@ -170,6 +179,21 @@
           "text": "I love the rain. "
         }
       ]
-    }
+    },
+    {
+        "id": "a3-end",
+        "background": "3b.png",
+        "characters": [{ "name": "", "sprite": "" }],
+        "dialogue": [
+          {
+            "speaker": "",
+            "text": "As the day rolls by and night falls, the sound of rain and cars driving through the streets near you keep you company. "
+          },
+          {
+            "speaker": "",
+            "text": "Soon, you find your place and take your sleep; ready for the next day."
+          }
+        ]
+      }
   ]
   
