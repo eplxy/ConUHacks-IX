@@ -396,7 +396,7 @@
       },
       {
         "newSprite": "",
-        "speaker": "${name}",
+        "speaker": "",
         "text": "Thank you for helping me out!"
       },
       {
@@ -574,7 +574,7 @@
       },
       {
         "newSprite": "",
-        "speaker": "${name}",
+        "speaker": "",
         "text": "Thank you for helping me out!"
       },
       {
@@ -821,7 +821,7 @@
     "characters": [{ "name": "Cashmere", "sprite": "cashmere.png" }],
     "dialogue": [
       {
-        "speaker": "${name}",
+        "speaker": "",
         "text": "We don’t mean any trouble, we’ve been staying here for a while and we have no intent on stepping on your toes, we all want the same thing, to survive."
       },
       {
@@ -837,7 +837,7 @@
     "characters": [{ "name": "", "sprite": "margiela.png" }],
     "dialogue": [
       {
-        "speaker": "${name}",
+        "speaker": "",
         "text": "Your stares mean nothing, come find out what we’re made of!"
       },
       {
