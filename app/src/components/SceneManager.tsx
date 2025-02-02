@@ -3,6 +3,7 @@ import DialogueBox from "./DialogueBox";
 import scenesData from "../data/script.json";
 import { Choice, Scene, TraitTracker, TraitChange } from "../models/models";
 import { Box } from "@mui/material";
+import "../style/bounce.css";
 
 const scenes: Scene[] = scenesData as Scene[];
 
@@ -13,16 +14,20 @@ export default function SceneManager() {
   const [currentScene, setCurrentScene] = useState<Scene>(scenes[0]);
   const [currentBackground, setCurrentBackground] = useState<string>("");
   const [currentSprite, setCurrentSprite] = useState<string>("");
+  const [bounce, setBounce] = useState<boolean>(false);
 
   useEffect(() => {
     console.log("🚀 ~ useEffect ~ currentScene:", currentScene);
-    if (currentScene.characters[0].sprite) {
-      setCurrentSprite(currentScene.characters[0].sprite);
-    } else if (currentScene?.characters?.[0].sprite === "") {
-      setCurrentSprite("");
-    }
     if (currentScene.background) {
       setCurrentBackground(currentScene.background);
+    }
+    if (currentScene.characters[0].sprite) {
+      setCurrentSprite(currentScene.characters[0].sprite);
+      setBounce(true);
+      const timer = setTimeout(() => setBounce(false), 2000); // duration of the bounce animation
+      return () => clearTimeout(timer);
+    } else if (currentScene?.characters?.[0].sprite === "") {
+      setCurrentSprite("");
     }
   }, [currentScene]);
 
@@ -73,6 +78,13 @@ export default function SceneManager() {
     }
   };
 
+  const handleChangeSprite = (newSprite: string) => {
+    setCurrentSprite(newSprite);
+    setBounce(true);
+    const timer = setTimeout(() => setBounce(false), 2000); // duration of the bounce animation
+    return () => clearTimeout(timer);
+  };
+
   const handleNextScene = () => {
     const nextScene = scenes.find(
       (scene: Scene) => scene.id === currentScene.nextSceneId
@@ -116,32 +128,15 @@ export default function SceneManager() {
             zIndex: 50,
           }}
           src={`${DEFAULT_CHARACTERS_FOLDER_PATH}${currentSprite}`}
-          className={`character`}
+          className={`character ${bounce ? "bounce" : ""}`}
         />
       )}
-      {/* {currentScene.characters?.map(
-        (char) =>
-          char.sprite && (
-            <img
-              style={{
-                userSelect: "none",
-                position: "absolute",
-                height: "100%",
-                right: "10%",
-                zIndex: 50,
-              }}
-              key={char.name}
-              src={`${DEFAULT_CHARACTERS_FOLDER_PATH}${char.sprite}`}
-              className={`character ${char.position}`}
-            />
-          )
-      )} */}
       <DialogueBox
         dialogue={currentScene.dialogue}
         onChoice={handleChoice}
         goToNextScene={handleNextScene}
         traitTracker={userTraits}
-        changeSprite={(newSprite: string) => setCurrentSprite(newSprite)}
+        changeSprite={handleChangeSprite}
         changeBackground={(newBackground: string) =>
           setCurrentBackground(newBackground)
         }
