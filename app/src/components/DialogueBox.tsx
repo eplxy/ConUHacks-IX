@@ -27,15 +27,13 @@ export default function DialogueBox(props: IDialogueBoxProps) {
       "🚀 ~ handleScreenClicked ~ props.traitTracker:",
       props.traitTracker
     );
-    console.log(props.dialogue[index]);
 
     if (index < props.dialogue.length - 1) {
       const nextLine = props.dialogue[index + 1];
-      console.log(nextLine);
-      if (nextLine.newSprite){
+      if (nextLine.newSprite || nextLine.newSprite === "") {
         props.changeSprite(nextLine.newSprite);
       }
-      if (nextLine.newBackground){
+      if (nextLine.newBackground) {
         props.changeBackground(nextLine.newBackground);
       }
       setCurrentLine(props.dialogue[index + 1]);

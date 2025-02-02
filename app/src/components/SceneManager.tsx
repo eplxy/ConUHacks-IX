@@ -15,8 +15,11 @@ export default function SceneManager() {
   const [currentSprite, setCurrentSprite] = useState<string>("");
 
   useEffect(() => {
+    console.log("🚀 ~ useEffect ~ currentScene:", currentScene);
     if (currentScene.characters[0].sprite) {
       setCurrentSprite(currentScene.characters[0].sprite);
+    } else if (currentScene?.characters?.[0].sprite === "") {
+      setCurrentSprite("");
     }
     if (currentScene.background) {
       setCurrentBackground(currentScene.background);
