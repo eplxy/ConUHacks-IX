@@ -3,12 +3,12 @@ import DialogueBox from "./DialogueBox";
 import scenesData from "../data/script.json";
 import { Scene } from "../models/models";
 import GameLayout from "./GameLayout";
-import "../assets/picture.png";
 import { Box } from "@mui/material";
 
 const scenes: Scene[] = scenesData as Scene[];
 
-const DEFAULT_BACKGROUNDS_FOLDER_PATH = "../assets/backgrounds/";
+const DEFAULT_BACKGROUNDS_FOLDER_PATH = "/backgrounds/";
+const DEFAULT_CHARACTERS_FOLDER_PATH = "/characters/";
 
 export default function SceneManager() {
   const [currentScene, setCurrentScene] = useState<Scene>(scenes[0]);
@@ -31,15 +31,23 @@ export default function SceneManager() {
         position: "relative",
         width: "100%",
         height: "100%",
-        background: "tan",
+        backgroundImage: currentScene.background
+          ? `url(${DEFAULT_BACKGROUNDS_FOLDER_PATH}${currentScene.background})`
+          : "none",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        transition: "background-image 0.5s ease-in-out",
       }}
       sx={{ alignItems: "flex-end" }}
     >
       {currentScene.characters?.map((char) => (
         <img
-          style={{ position: "absolute" }}
+          style={{ position: "absolute",
+            height: "100%",
+            right: "10%"
+           }}
           key={char.name}
-          src={char.sprite}
+          src={`${DEFAULT_CHARACTERS_FOLDER_PATH}${char.sprite}`}
           className={`character ${char.position}`}
         />
       ))}

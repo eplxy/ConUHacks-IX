@@ -1,9 +1,9 @@
 [
   {
     "id": "scene1",
-    "background": "/picture.png",
+    "background": "bg.png",
     "characters": [
-      { "name": "Alice", "sprite": "/alice.png", "position": "left" }
+      { "name": "Alice", "sprite": "chartest.png", "position": "left" }
     ],
     "dialogue": [
       { "speaker": "Alice", "text": "Welcome to the visual novel!" },
