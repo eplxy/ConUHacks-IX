@@ -7,6 +7,9 @@ export interface IDialogueBoxProps {
   dialogue: Line[];
   onChoice: (choice: Choice) => void;
   traitTracker?: TraitTracker;
+  goToNextScene: () => void;
+  changeSprite: (newSprite: string) => void;
+  changeBackground: (newBackground: string) => void;
 }
 
 export default function DialogueBox(props: IDialogueBoxProps) {
@@ -24,10 +27,24 @@ export default function DialogueBox(props: IDialogueBoxProps) {
       "🚀 ~ handleScreenClicked ~ props.traitTracker:",
       props.traitTracker
     );
+    console.log(props.dialogue[index]);
 
     if (index < props.dialogue.length - 1) {
+      const nextLine = props.dialogue[index + 1];
+      console.log(nextLine);
+      if (nextLine.newSprite){
+        props.changeSprite(nextLine.newSprite);
+      }
+      if (nextLine.newBackground){
+        props.changeBackground(nextLine.newBackground);
+      }
       setCurrentLine(props.dialogue[index + 1]);
       setIndex(index + 1);
+    } else {
+      if ((currentLine?.choices?.length ?? 0) == 0) {
+        props.goToNextScene();
+        setIndex(0);
+      }
     }
     if (!areChoicesVisible && (currentLine?.choices?.length ?? 0) > 0) {
       setAreChoicesVisible(true);
@@ -36,6 +53,7 @@ export default function DialogueBox(props: IDialogueBoxProps) {
 
   const handleOnChoiceClicked = (choice: Choice) => {
     setAreChoicesVisible(false);
+    setIndex(0);
     props.onChoice(choice);
   };
 

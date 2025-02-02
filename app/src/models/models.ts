@@ -28,6 +28,8 @@ export interface TraitChange {
 export interface Line {
   speaker: string;
   text: string;
+  newSprite?: string;
+  newBackground?: string;
   choices?: Choice[];
 }
 
@@ -43,4 +45,5 @@ export interface Scene {
   background?: string;
   characters: Character[];
   dialogue: Line[];
+  nextSceneId?: string; // for when the scene does not end with a choice
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DialogueBox from "./DialogueBox";
 import scenesData from "../data/script.json";
 import { Choice, Scene, TraitTracker, TraitChange } from "../models/models";
@@ -11,6 +11,17 @@ const DEFAULT_CHARACTERS_FOLDER_PATH = "/characters/";
 
 export default function SceneManager() {
   const [currentScene, setCurrentScene] = useState<Scene>(scenes[0]);
+  const [currentBackground, setCurrentBackground] = useState<string>("");
+  const [currentSprite, setCurrentSprite] = useState<string>("");
+
+  useEffect(() => {
+    if (currentScene.characters[0].sprite) {
+      setCurrentSprite(currentScene.characters[0].sprite);
+    }
+    if (currentScene.background) {
+      setCurrentBackground(currentScene.background);
+    }
+  }, [currentScene]);
 
   const [userTraits, setUserTraits] = useState<TraitTracker>({
     Agreeableness: 0,
@@ -59,6 +70,15 @@ export default function SceneManager() {
     }
   };
 
+  const handleNextScene = () => {
+    const nextScene = scenes.find(
+      (scene: Scene) => scene.id === currentScene.nextSceneId
+    );
+    if (nextScene) {
+      setCurrentScene(nextScene);
+    }
+  };
+
   return (
     <Box
       sx={{
@@ -73,8 +93,8 @@ export default function SceneManager() {
           position: "absolute",
           width: "100%",
           height: "100%",
-          backgroundImage: currentScene.background
-            ? `url(${DEFAULT_BACKGROUNDS_FOLDER_PATH}${currentScene.background})`
+          backgroundImage: currentBackground
+            ? `url(${DEFAULT_BACKGROUNDS_FOLDER_PATH}${currentBackground})`
             : "none",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -83,11 +103,25 @@ export default function SceneManager() {
         }}
         sx={{ alignItems: "flex-end", zIndex: 10 }}
       ></Box>
-      {currentScene.characters?.map(
+      {currentSprite && (
+        <img
+          style={{
+            userSelect: "none",
+            position: "absolute",
+            height: "100%",
+            right: "10%",
+            zIndex: 50,
+          }}
+          src={`${DEFAULT_CHARACTERS_FOLDER_PATH}${currentSprite}`}
+          className={`character`}
+        />
+      )}
+      {/* {currentScene.characters?.map(
         (char) =>
           char.sprite && (
             <img
               style={{
+                userSelect: "none",
                 position: "absolute",
                 height: "100%",
                 right: "10%",
@@ -98,11 +132,16 @@ export default function SceneManager() {
               className={`character ${char.position}`}
             />
           )
-      )}
+      )} */}
       <DialogueBox
         dialogue={currentScene.dialogue}
         onChoice={handleChoice}
+        goToNextScene={handleNextScene}
         traitTracker={userTraits}
+        changeSprite={(newSprite: string) => setCurrentSprite(newSprite)}
+        changeBackground={(newBackground: string) =>
+          setCurrentBackground(newBackground)
+        }
       />
     </Box>
   );
