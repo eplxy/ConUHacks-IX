@@ -1,0 +1,183 @@
+[
+  {
+    "id": "a6",
+    "background": "6a.png",
+    "characters": [
+      {
+        "name": "",
+        "sprite": ""
+      }
+    ],
+    "dialogue": [
+      {
+        "newSprite": "",
+        "speaker": "",
+        "text": "One day, after weeks of adapting to life as a stray, something unexpected happens. A familiar scent drifts through the alley. You look up—and there they are."
+      },
+      {
+        "speaker": "",
+        "text": "Your former owner."
+      },
+      {
+        "speaker": "",
+        "text": "They kneel, calling your name, looking at you with guilt and sadness. They hold out a carrier, pleading for you to come back home."
+      },
+      {
+        "speaker": "",
+        "text": "This is your final test.",
+        "choices": [
+          {
+            "text": "Hiss and scratch, refusing to go back. ",
+            "next": "a6-Margiela",
+            "traitChanges": [
+              {
+                "trait": 2,
+                "change": 1
+              }
+            ]
+          },
+          {
+            "text": "Observe them quietly, analyzing their sincerity.",
+            "next": "a6-Calpico",
+            "traitChanges": [
+              {
+                "trait": 3,
+                "change": 1
+              }
+            ]
+          },
+          {
+            "text": "Freeze up, overcome with anxiety.",
+            "next": "a6-darius",
+            "traitChanges": [
+              {
+                "trait": 4,
+                "change": 1
+              }
+            ]
+          },
+          {
+            "text": "Silently walk away without a word. ",
+            "next": "a6-gangus",
+            "traitChanges": [
+              {
+                "trait": 5,
+                "change": 1
+              }
+            ]
+          },
+          {
+            "text": "Run into their arms, forgiving them instantly.",
+            "next": "a6-cashmere",
+            "traitChanges": [
+              {
+                "trait": 1,
+                "change": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a6-cashmere",
+    "background": "6a.png",
+    "characters": [
+      {
+        "name": "Cashmere",
+        "sprite": "cashmere.png"
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "",
+        "text": "Ending: 'The Housecat's Heart' – You choose warmth and trust, hoping your owner has changed."
+      },
+      {
+        "speaker": "Cashmere",
+        "text": "It was nice to meet you ${name}!"
+      }
+    ]
+  },
+  {
+    "id": "a6-margiela",
+    "background": "6a.png",
+    "characters": [
+      {
+        "name": "",
+        "sprite": "margiela.png"
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "",
+        "text": "Ending: 'The Untamed King' – You’ve found freedom and power, and you’ll never let anyone take it from you."
+      },
+      {
+        "speaker": "Margiela",
+        "text": "No one who throws you away deserves you."
+      }
+    ]
+  },
+  {
+    "id": "a6-calpico",
+    "background": "6a.png",
+    "characters": [
+      {
+        "name": "calpico",
+        "sprite": "calpico.png"
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "",
+        "text": "Ending: 'The Negotiator’s Return' – You make your choice based on logic, ensuring it’s safe before trusting again."
+      },
+      {
+        "speaker": "Calpico",
+        "text": "What’s your conclusion?"
+      }
+    ]
+  },
+  {
+    "id": "a6-darius",
+    "background": "6a.png",
+    "characters": [
+      {
+        "name": "",
+        "sprite": "darius.png"
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "",
+        "text": "Ending: 'The Ghost of the Past' – You’re haunted by the ‘what if,’ but the fear of being abandoned again stops you from returning."
+      },
+      {
+        "speaker": "Darius",
+        "text": "It's okay to be scared."
+      }
+    ]
+  },
+  {
+    "id": "a6-gangus",
+    "background": "6a.png",
+    "characters": [
+      {
+        "name": "",
+        "sprite": "gangus.png"
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "Volfgangus Armadeus Raven Meowzart",
+        "text": "You already know the answer."
+      },
+      {
+        "speaker": "",
+        "text": "Ending: 'The Phantom Stray' – You refuse to rely on anyone again, choosing solitude over uncertainty."
+      }
+    ]
+  }
+]
