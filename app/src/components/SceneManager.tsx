@@ -4,6 +4,7 @@ import scenesData from "../data/script.json";
 import { Choice, Scene, TraitTracker, TraitChange } from "../models/models";
 import { Box } from "@mui/material";
 import "../style/bounce.css";
+import UserNameDialog from "./UserNameDialog";
 
 const scenes: Scene[] = scenesData as Scene[];
 
@@ -15,6 +16,9 @@ export default function SceneManager() {
   const [currentBackground, setCurrentBackground] = useState<string>("");
   const [currentSprite, setCurrentSprite] = useState<string>("");
   const [bounce, setBounce] = useState<boolean>(false);
+  const [name, setName] = useState<string>("");
+  const [isUserNameDialogOpen, setIsUserNameDialogOpen] =
+    useState<boolean>(false);
 
   useEffect(() => {
     console.log("🚀 ~ useEffect ~ currentScene:", currentScene);
@@ -78,6 +82,16 @@ export default function SceneManager() {
     }
   };
 
+  const retrieveUserName = () => {
+    setIsUserNameDialogOpen(true);
+  };
+
+  const handleSetName = (name: string) => {
+    setName(name);
+    setIsUserNameDialogOpen(false);
+    // handleNextScene()
+  };
+
   const handleChangeSprite = (newSprite: string) => {
     setCurrentSprite(newSprite);
     setBounce(true);
@@ -102,6 +116,11 @@ export default function SceneManager() {
         height: "100%",
       }}
     >
+      <UserNameDialog
+        open={isUserNameDialogOpen}
+        dialogSubmit={handleSetName}
+      />
+
       <Box
         className="scene"
         style={{
@@ -140,6 +159,8 @@ export default function SceneManager() {
         changeBackground={(newBackground: string) =>
           setCurrentBackground(newBackground)
         }
+        retrieveUserName={retrieveUserName}
+        username={name}
       />
     </Box>
   );

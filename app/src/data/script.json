@@ -1,3 +1,353 @@
 [
-  
+  {
+    "id": "a1-s1",
+    "background": "a1-b1.png",
+    "characters": [
+      {
+        "sprite": ""
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "",
+        "text": "It's my first time touching the grass. It always looked so soft through the glass, but yet… it's so prickly"
+      },
+      {
+        "speaker": "",
+        "text": "What am I supposed to do now? Wander around? Find shelter?"
+      },
+      {
+        "speaker": "",
+        "text": "(stomach growling)"
+      },
+      {
+        "speaker": "",
+        "text": " I guess that answers my question…"
+      },
+      {
+        "speaker": "",
+        "text": "OH! (Cashmere Jumps out of nowhere)"
+      },
+      {
+        "newSprite": "cashmere.png",
+        "speaker": "Cashmere",
+        "text": "Hi there!"
+      },
+      {
+        "speaker": "",
+        "text": "Uhh…Hi…"
+      },
+      {
+        "speaker": "",
+        "text": "(He looks so happy.)"
+      },
+      {
+        "speaker": "Cashmere",
+        "text": "You look lost, do you need help?"
+      },
+      {
+        "speaker": "",
+        "text": "Oh.. Um.. To be honest.. Yeah..."
+      },
+      {
+        "speaker": "Cashmere",
+        "text": "Okay! Come with me! I'll help you! By the way, my name is Cashmere. What’s your name?",
+        "nameChoice": true
+      }
+    ],
+    "nextSceneId": "a1-s2"
+  },
+  {
+    "id": "a1-s2",
+    "background": "a1-b1.png",
+    "nextSceneId": "a1-s3",
+    "characters": [
+      {
+        "sprite": "cashmere.png"
+      }
+    ],
+    "dialogue": [
+      {
+        "speaker": "",
+        "text": "My name is ${name}."
+      },
+      {
+        "speaker": "Cashmere",
+        "text": "Nice to meet you ${name}!"
+      },
+      {
+        "speaker": "",
+        "text": "Cashmere brings you to meet the rest of the group."
+      },
+      {
+        "speaker": "Cashmere",
+        "text": "So here is my group!"
+      },
+      {
+        "newSprite": "darius.png",
+        "speaker": "Cashmere",
+        "text": "This is Darius."
+      },
+
+      {
+        "speaker": "",
+        "text": "(He looks stressed out.)"
+      },
+
+      {
+        "newSprite": "margiela.png",
+        "speaker": "Cashmere",
+        "text": "This is Margiela."
+      },
+
+      {
+        "speaker": "",
+        "text": "What's with this guy?"
+      },
+
+      {
+        "newSprite": "gangus.png",
+        "speaker": "Cashmere",
+        "text": "This is Volfgangus Armadeus Raven Meowzart."
+      },
+      {
+        "speaker": "",
+        "text": "He doesn't look like he wants to be here."
+      },
+      {
+        "newSprite": "calpico.png",
+        "speaker": "Cashmere",
+        "text": "And last but not least, this is Calpico."
+      }
+    ]
+  },
+
+  {
+    "id": "a1-s3",
+    "background": "a1-b1.png",
+    "characters": [{ "sprite": "" }],
+    "dialogue": [
+      {
+        "speaker": "",
+        "text": "Pick a character to learn more about them!",
+        "choices": [
+          {
+            "text": "Cashmere",
+            "next": "a1-exp-cashmere"
+          },
+          {
+            "text": "Margiela",
+            "next": "a1-exp-margiela"
+          },
+          {
+            "text": "Darius",
+            "next": "a1-exp-darius"
+          },
+          {
+            "text": "Volfgangus Armadeus Raven Meowzart",
+            "next": "a1-exp-gangus"
+          },
+          {
+            "text": "calpico",
+            "next": "a1-exp-calpico"
+          },
+          {
+            "text": "Continue story",
+            "next": "a1-s4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a1-exp-cashmere",
+    "background": "a1-b1.png",
+    "nextSceneId": "a1-s3",
+    "characters": [{ "sprite": "cashmere.png" }],
+    "dialogue": [
+      {
+        "speaker": "Cashmere",
+        "text": "Hey, how are you? Have you gotten around to meeting everyone yet? Some may look mean, but don’t worry, when they get to know you, they’ll warm up to you!"
+      },
+      {
+        "speaker": "Cashmere",
+        "text": "Surviving on these streets may be hard at first. My advice is to be nice to everyone and don’t be afraid to ask for help! You got this!"
+      }
+    ]
+  },
+  {
+    "id": "a1-exp-margiela",
+    "background": "a1-b1.png",
+    "nextSceneId": "a1-s3",
+    "characters": [{ "sprite": "margiela.png" }],
+    "dialogue": [
+      {
+        "speaker": "Margiela",
+        "text": "Hey there. What was your name again? ${name}? Not as cool as my name, but it’s alright I guess."
+      },
+      {
+        "speaker": "Margiela",
+        "text": "To survive in the streets you need to trust yourself and only yourself. How do you think i haven’t gotten any scars on my pretty fur?"
+      },
+      {
+        "speaker": "Margiela",
+        "text": "I’m just hanging out with these guys because Cashmere begged me to."
+      },
+      {
+        "speaker": "Margiela",
+        "text": "I mean, I understand him, wanting someone as cool as me in the group is the best addition he could hope for."
+      }
+    ]
+  },
+  {
+    "id": "a1-exp-darius",
+    "background": "a1-b1.png",
+    "nextSceneId": "a1-s3",
+    "characters": [{ "sprite": "darius.png" }],
+    "dialogue": [
+      {
+        "speaker": "Darius",
+        "text": "Hiya! Name’s Darius! FOR NOXUS haha, get it?"
+      },
+      {
+        "speaker": "Darius",
+        "text": "My friends think I’m lucky for being able to survive this long, but really - I just do what they do."
+      },
+      {
+        "speaker": "Darius",
+        "text": "They’re cool, I love them! Sometimes they treat me differently, and I don’t know why - all I know is that they’re there for me when it matters!"
+      }
+    ]
+  },
+  {
+    "id": "a1-exp-gangus",
+    "background": "a1-b1.png",
+    "nextSceneId": "a1-s3",
+    "characters": [{ "sprite": "gangus.png" }],
+    "dialogue": [
+      {
+        "speaker": "Volfgangus Armadeus Raven Meowzart",
+        "text": "*He looks at you and scoffs.*"
+      }
+    ]
+  },
+  {
+    "id": "a1-exp-calpico",
+    "background": "a1-b1.png",
+    "nextSceneId": "a1-s3",
+    "characters": [{ "sprite": "calpico.png" }],
+    "dialogue": [
+      {
+        "speaker": "Calpico",
+        "text": "Hi, my name’s Calpico. Need the time? Need to know where to find food?"
+      },
+      {
+        "speaker": "Calpico",
+        "text": "If ever you have any questions, come to me."
+      },
+      {
+        "speaker": "Calpico",
+        "text": "Ask me anything, I know the answer. These other guys do the same thing when they need help."
+      }
+    ]
+  },
+  {
+    "id": "a1-s4",
+    "background": "a1-b2.png",
+    "nextSceneId": "a1-s3",
+    "characters": [{ "sprite": "" }],
+    "dialogue": [
+      {
+        "speaker": "",
+        "text": "A human approaches your group. They offer you food. What do you do?",
+        "choices": [
+          {
+            "text": "Eat the food immediately",
+            "next": "a1-cashmere",
+            "traitChanges": [{ "trait": 1, "change": 1 }]
+          },
+          {
+            "text": "Hiss at the human",
+            "next": "a1-margiela",
+            "traitChanges": [{ "trait": 2, "change": 1 }]
+          },
+          {
+            "text": "Wait for the human to leave and then eat",
+            "next": "a1-calpico",
+            "traitChanges": [{ "trait": 3, "change": 1 }]
+          },
+          {
+            "text": "Run away immediately",
+            "next": "a1-darius",
+            "traitChanges": [{ "trait": 4, "change": 1 }]
+          },
+          {
+            "text": "Refuse to eat at all",
+            "next": "a1-gangus",
+            "traitChanges": [{ "trait": 5, "change": 1 }]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a1-cashmere",
+    "background": "a1-b2.png",
+    "nextSceneId": "a2",
+    "characters": [{ "name": "Cashmere", "sprite": "cashmere.png" }],
+    "dialogue": [
+      {
+        "speaker": "Cashmere",
+        "text": "*Cashmere eats with you, enjoying the warmth of the moment*"
+      }
+    ]
+  },
+  {
+    "id": "a1-margiela",
+    "background": "a1-b2.png",
+    "nextSceneId": "a2",
+    "characters": [{ "name": "", "sprite": "margiela.png" }],
+    "dialogue": [
+      {
+        "speaker": "",
+        "text": "*Margiela commends your boldness, saying you should dominate, not beg.*"
+      }
+    ]
+  },
+  {
+    "id": "a1-calpico",
+    "background": "a1-b2.png",
+    "nextSceneId": "a2",
+    "characters": [{ "name": "", "sprite": "Calpico" }],
+    "dialogue": [
+      {
+        "speaker": "Calpico",
+        "text": "*Calpico respects your cautious, calculated approach.*"
+      }
+    ]
+  },
+  {
+    "id": "a1-darius",
+    "background": "a1-b2.png",
+    "nextSceneId": "a2",
+    "characters": [{ "name": "", "sprite": "darius.png" }],
+    "dialogue": [
+      {
+        "speaker": "Darius",
+        "text": "*Darius follows, saying you can't trust humans.*"
+      }
+    ]
+  },
+  {
+    "id": "a1-gangus",
+    "background": "a1-b2.png",
+    "characters": [{ "name": "", "sprite": "gangus.png" }],
+    "nextSceneId": "a2",
+    "dialogue": [
+      {
+        "speaker": "Gangus",
+        "text": "*Gangus, watching from the shadows, mutters that it's dangerous to rely on humans at all.*"
+      }
+    ]
+  }
 ]

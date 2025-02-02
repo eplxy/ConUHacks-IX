@@ -31,11 +31,12 @@ export interface Line {
   newSprite?: string;
   newBackground?: string;
   choices?: Choice[];
+  nameChoice?: boolean;
 }
 
 export interface Character {
-  id: number;
-  name: string;
+  id?: number;
+  name?: string;
   sprite?: string;
   position?: string;
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Choice, Line, TraitTracker } from "../models/models";
 import "../style/dialoguecontainer.css";
 import { Box, Button } from "@mui/material";
+import UserNameDialog from "./UserNameDialog";
 
 export interface IDialogueBoxProps {
   dialogue: Line[];
@@ -10,6 +11,8 @@ export interface IDialogueBoxProps {
   goToNextScene: () => void;
   changeSprite: (newSprite: string) => void;
   changeBackground: (newBackground: string) => void;
+  retrieveUserName: () => void;
+  username: string;
 }
 
 export default function DialogueBox(props: IDialogueBoxProps) {
@@ -21,12 +24,20 @@ export default function DialogueBox(props: IDialogueBoxProps) {
     setCurrentLine(props.dialogue?.[0]);
   }, [props.dialogue]);
 
+  const formatMessage = (message: string) => {
+    return message.replace("${name}", props.username);
+  };
+
   const handleScreenClicked = () => {
     // remove later, but notice how traits go up!
     console.log(
       "🚀 ~ handleScreenClicked ~ props.traitTracker:",
       props.traitTracker
     );
+
+    if (currentLine.nameChoice) {
+      props.retrieveUserName();
+    }
 
     if (index < props.dialogue.length - 1) {
       const nextLine = props.dialogue[index + 1];
@@ -124,7 +135,7 @@ export default function DialogueBox(props: IDialogueBoxProps) {
           <div className="dialogue-text">
             {currentLine && (
               <p style={{ userSelect: "none", marginTop: "6px" }}>
-                {currentLine.text}
+                {formatMessage(currentLine.text)}
               </p>
             )}
           </div>
