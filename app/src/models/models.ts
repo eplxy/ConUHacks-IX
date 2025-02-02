@@ -34,8 +34,8 @@ export interface Line {
 }
 
 export interface Character {
-  id: number;
-  name: string;
+  id?: number;
+  name?: string;
   sprite?: string;
   position?: string;
 }

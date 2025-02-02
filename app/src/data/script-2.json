@@ -1,0 +1,175 @@
+[
+    {
+      "id": "a2",
+      "background": "2a.png",
+      "characters": [
+        {
+          "name": "Marigela",
+          "sprite": "margiela.png"
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "Margiela",
+          "text": "The sun is starting to set..."
+        },
+        {
+          "newSprite": "darius.png",
+          "speaker": "Darius",
+          "text": "Woah! It is! Cool find Margiela!"
+        },
+        {
+          "newSprite": "calpico.png",
+          "speaker": "Calpico",
+          "text": "It is not that hard to notice Darius. You should be more aware of your surroundings."
+        },
+        {
+          "newSprite": "darius.png",
+          "speaker": "Darius",
+          "text": "Yes Calpico! You’re a smart fella!"
+        },
+        {
+          "newSprite": "cashmere.png",
+          "speaker": "Cashmere",
+          "text": "Honestly, today was really great! You’re fun to be around ${name}, I hope you’ll be staying around more!"
+        },
+        {
+          "newSprite": "gangus.png",
+          "speaker": "Volfgangus Armadeus Raven Meowzart",
+          "text": "*Grunts*"
+        },
+        {
+          "newSprite": "darius.png",
+          "speaker": "Darius",
+          "text": "Gangus says he thinks you’re cool!"
+        },
+        {
+          "newSprite": "",
+          "speaker": "${name}",
+          "text": "Thank you for helping me out!"
+        },
+        {
+          "newSprite": "calpico.png",
+          "speaker": "Calpico",
+          "text": "Do you guys smell that? Smells like the rain’s coming"
+        },
+        {
+          "newSprite": "darius.png",
+          "speaker": "Darius",
+          "text": "Uh oh, the sky is getting grey! We need to start finding shelter!"
+        },
+        {
+          "newSprite": "cashmere.png",
+          "speaker": "Cashmere",
+          "text": "He’s right, quick ${name}, what do we do?"
+        },
+        {
+          "speaker": "",
+          "text": "You look up at the sky and notice the big clouds coming your way. What do you do?",
+          "choices": [
+            {
+              "text": "Stay out in the rain, staring at the sky.",
+              "next": "a2-gangus",
+              "traitChanges": [{ "trait": 5, "change": 1 }]
+            },
+            {
+              "text": "Panic, get lost, and sleep in an exposed alley.",
+              "next": "a2-darius",
+              "traitChanges": [{ "trait": 4, "change": 1 }]
+            },
+            {
+              "text": "Curl up in a cozy spot under a tree.",
+              "next": "a2-cashmere",
+              "traitChanges": [{ "trait": 1, "change": 1 }]
+            },
+            {
+              "text": "Find the driest, safest, and most structurally sound shelter.",
+              "next": "a2-calpico",  
+              "traitChanges": [{ "trait": 3, "change": 1 }]
+            },
+            {
+              "text": "Claim a dry crate and push anyone else out",
+              "next": "a2-margiela",
+              "traitChanges": [{ "trait": 2, "change": 1 }]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2-cashmere",
+      "background": "2a.png",
+      "characters": [{ "name": "Cashmere", "sprite": "cashmere.png" }],
+      "dialogue": [
+        {
+          "speaker": "",
+          "text": "*Cashmere purrs, happy that you’re together.*"
+        },
+        {
+          "speaker": "Cashmere",
+          "text": "Oh, we chose the same spot. Nice to see you again!"
+        }
+      ]
+    },
+    {
+      "id": "a2-margiela",
+      "background": "2a.png",
+      "characters": [{ "name": "", "sprite": "margiela.png" }],
+      "dialogue": [
+        {
+          "speaker": "",
+          "text": "*Margiela smirks*"
+        },
+        {
+          "speaker": "Marigela",
+          "text": "Now that’s how you get what you want."
+        }
+      ]
+    },
+    {
+      "id": "a2-calpico",
+      "background": "2a.png",
+      "characters": [{ "name": "calpico", "sprite": "calpico.png" }],
+      "dialogue": [
+        {
+          "speaker": "",
+          "text": "*Calpico nods, impressed by your logic.*"
+        },
+        {
+          "speaker": "Calpico",
+          "text": "Well Done. You learn fast."
+        }
+      ]
+    },
+    {
+      "id": "a2-darius",
+      "background": "2a.png",
+      "characters": [{ "name": "", "sprite": "darius.png" }],
+      "dialogue": [
+        {
+          "speaker": "",
+          "text": "Darius finds you later, relating to your struggle."
+        },
+        {
+          "speaker": "Darius",
+          "text": "You’ll be okay. Let’s go find the others."
+        }
+      ]
+    },
+    {
+      "id": "a2-gangus",
+      "background": "2a.png",
+      "characters": [{ "name": "", "sprite": "gangus.png" }],
+      "dialogue": [
+        {
+          "speaker": "",
+          "text": "*Gangus, from a distance, respects your discipline and endurance.*"
+        },
+        {
+          "speaker": "Volfgangus Armadeus Raven Meowzart",
+          "text": "I love the rain. "
+        }
+      ]
+    }
+  ]
+  
