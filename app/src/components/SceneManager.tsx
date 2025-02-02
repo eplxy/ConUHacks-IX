@@ -21,7 +21,6 @@ export default function SceneManager() {
     useState<boolean>(false);
 
   useEffect(() => {
-    console.log("🚀 ~ useEffect ~ currentScene:", currentScene);
     if (currentScene.background) {
       setCurrentBackground(currentScene.background);
     }

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Choice, Line, TraitTracker } from "../models/models";
 import "../style/dialoguecontainer.css";
 import { Box, Button } from "@mui/material";
-import UserNameDialog from "./UserNameDialog";
 
 export interface IDialogueBoxProps {
   dialogue: Line[];

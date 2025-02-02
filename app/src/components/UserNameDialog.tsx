@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Dialog,
   DialogTitle,
@@ -24,6 +24,7 @@ export default function UserNameDialog({
     dialogSubmit(name);
   };
   const handleClose: DialogProps["onClose"] = (event, reason) => {
+    console.log(event);
     if (reason && reason === "backdropClick") return;
   };
   return (
