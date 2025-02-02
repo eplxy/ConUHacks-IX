@@ -1,0 +1,185 @@
+[
+    {
+      "id": "a5",
+      "background": "5a.png",
+      "nextSceneId": "a5-2",
+      "characters": [
+        {
+          "name": "",
+          "sprite": ""
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "",
+          "text": "With the strays out of the way, your group reunites to see what to do next, you’ve now come to an impasse: you’re hungry, and food isn’t being handed to you anymore. You need to hunt."
+        },
+        {
+          "newSprite": "cashmere.png",
+          "speaker": "Cashmere",
+          "text": "Well that was eventful. Hopefully something like this doesn’t happen again. "
+        },
+        {
+          "newSprite": "darius.png",
+          "speaker": "Darius",
+          "text": "That got me on my toes! "
+        },
+        {
+          "newSprite": "calpico.png",
+          "speaker": "Calpico",
+          "text": "As long as we are away from them, we should be fine."
+        },
+        {
+          "newSprite": "",
+          "text": "*Your stomach growls*"
+        },
+        {
+          "newSprite": "darius.png",
+          "speaker": "Darius",
+          "text": "Ruh-roh, someone’s a lil’ hungies, aren’t they?"
+        },
+        {
+          "newSprite": "cashmere.png",
+          "speaker": "Cashmere",
+          "text": "I can’t blame you after all we went through today. Let’s try to find something to eat!"
+        },
+        {
+          "newSprite": "calpico.png",
+          "speaker": "Calpico",
+          "text": "The wisest choice would be to go to the forest. There are a lot of rodents and birds we could hunt."
+        },
+        {
+          "newSprite": "margiela.png",
+          "speaker": "Marigela",
+          "text": "${name}, it’s your first time hunting. Follow my lead. We’ll get the best meal tonight."
+        },
+        {
+          "newSprite": "gangus.png",
+          "speaker": "Volfgangus Armadeus Raven Meowzart",
+          "text": "*Grunts in agreement*"
+        }
+      ]
+    },
+    {
+      "id": "a5-2",
+      "background": "5b.png",
+      "characters": [
+        {
+          "name": "Marigela",
+          "sprite": "gangus.png"
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "",
+          "text": "How should we hunt?",
+  
+          "choices": [
+            {
+              "text": "Miss your chance, get frustrated, and sulk.",
+              "next": "a5-darius",
+              "traitChanges": [{ "trait": 4, "change": 1 }]
+            },
+            {
+              "text": "Refuse to hunt, preferring to scavenge instead.",
+              "next": "a5-gangus",
+              "traitChanges": [{ "trait": 5, "change": 1 }]
+            },
+            {
+              "text": "Charge at the prey without thinking, relying on brute force.",
+              "next": "a5-margiela",  
+              "traitChanges": [{ "trait": 2, "change": 1 }]
+            },
+  
+            {
+              "text": "Strategically plan and trap the prey.",
+              "next": "a5-calpico",
+              "traitChanges": [{ "trait": 3, "change": 1 }]
+            },
+            {
+              "text": "Try hunting with Cashmere’s help, even if you’re clumsy",
+              "next": "a5-cashmere",
+              "traitChanges": [{ "trait": 1, "change": 1 }]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a5-cashmere",
+      "background": "5b.png",
+      "characters": [{ "name": "Cashmere", "sprite": "cashmere.png" }],
+      "dialogue": [
+        {
+          "speaker": "",
+          "text": "Cashmere teaches you patience."
+        },
+        {
+          "speaker": "Cashmere",
+          "text": "Cashmere: Just follow my lead, I’ll show you how easy this is."
+        }
+      ]
+    },
+    {
+      "id": "a5-margiela",
+      "background": "5b.png",
+      "characters": [{ "name": "", "sprite": "margiela.png" }],
+      "dialogue": [
+        {
+          "speaker": "",
+          "text": "Margiela laughs and encourages your confidence."
+        },
+        {
+          "speaker": "Marigela",
+          "text": "Haha! Our hunt will be legendary!!"
+        }
+      ]
+    },
+    {
+      "id": "a5-calpico",
+      "background": "5b.png",
+      "characters": [{ "name": "calpico", "sprite": "calpico.png" }],
+      "dialogue": [
+        {
+          "speaker": "",
+          "text": "*Calpico praises your intellect.*"
+        },
+        {
+          "speaker": "Calpico",
+          "text": "Calpico: I like it. I didn’t think you had it in you. Look at you, using your brain!"
+        }
+      ]
+    },
+    {
+      "id": "a5-darius",
+      "background": "5b.png",
+      "characters": [{ "name": "", "sprite": "darius.png" }],
+      "dialogue": [
+       
+        {
+          "speaker": "",
+          "text": "*Darius sighs*"
+        },
+        {
+          "speaker": "Darius",
+          "text": "Yeah, hunting sucks. Don’t worry, we can ask someone else to help us."
+        }
+      ]
+    },
+    {
+      "id": "a5-gangus",
+      "background": "5b.png",
+      "characters": [{ "name": "", "sprite": "gangus.png" }],
+      "dialogue": [
+        {
+          "speaker": "",
+          "text": "*Gangus respects your discipline and self-control.*"
+        },
+        {
+          "speaker": "Volfgangus Armadeus Raven Meowzart",
+          "text": "I understand it now… You’re like me, aren’t you?"
+        }
+      ]
+    }
+  ]
+  

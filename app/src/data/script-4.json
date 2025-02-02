@@ -1,0 +1,164 @@
+[
+    {
+      "id": "a4",
+      "background": "4a.png",
+      "characters": [
+        {
+          "name": "Marigela",
+          "sprite": "gangus.png"
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "Volfgangus Armadeus Raven Meowzart",
+          "text": "*Hisses* Leave! This is ours!"
+        },
+        {
+          "newSprite": "margiela.png",
+          "speaker": "Margiela",
+          "text": "Yeah! We found this fair and square!"
+        },
+        {
+          "newSprite": "",
+          "speaker": "Stray Cats",
+          "text": "This looks like a nice spot, would be a shame if something were to happen to it, don't you guys think?"
+        },
+        {
+          "newSprite": "darius.png",
+          "speaker": "Darius",
+          "text": "Nuh-uh."
+        },
+        {
+          "newSprite": "cashmere.png",
+          "speaker": "Cashmere",
+          "text": "I'm sure we can all come to some agreement and find some common gr-"
+        },
+        {
+          "newSprite": "margiela.png",
+          "speaker": "Margiela",
+          "text": "Leave!"
+        },
+        {
+          "newSprite": "",
+          "speaker": "Stray Cats",
+          "text": " I don’t think I appreciate the tone there, buddy. See, the way I see it, this place could easily be our new home."
+        },
+        {
+          
+          "speaker": "${name}",
+          "text": "Oh no!"
+        },
+        {
+          "newSprite": "calpico.png",
+          "speaker": "Calpico",
+          "text": "Guys, let’s talk it out, there’s nothing wrong with sharing, no?"
+        },
+        {
+          "newSprite": "darius.png",
+          "speaker": "Darius",
+          "text": "What do you think we should do ${name}?",
+  
+          "choices": [
+            {
+              "text": "Step back in the shadows, watching silently.",
+              "next": "a4-gangus",
+              "traitChanges": [{ "trait": 5, "change": 1 }]
+            },
+            {
+              "text": "Panic and freeze, unsure what to do.",
+              "next": "a4-darius",
+              "traitChanges": [{ "trait": 4, "change": 1 }]
+            },
+            {
+              "text": "Analyze the situation and find an escape route.",
+              "next": "a4-calpico",
+              "traitChanges": [{ "trait": 1, "change": 1 }]
+            },
+            {
+              "text": "Puff up and challenge them outright.",
+              "next": "a4-margiela",  
+              "traitChanges": [{ "trait": 3, "change": 1 }]
+            },
+            {
+              "text": "Try to de-escalate and talk your way out.",
+              "next": "a4-cashmere",
+              "traitChanges": [{ "trait": 2, "change": 1 }]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a4-cashmere",
+      "background": "4a.png",
+      "characters": [{ "name": "Cashmere", "sprite": "cashmere.png" }],
+      "dialogue": [
+        {
+          "speaker": "${name}",
+          "text": "We don’t mean any trouble, we’ve been staying here for a while and we have no intent on stepping on your toes, we all want the same thing, to survive."
+        },
+        {
+          "speaker": "Cashmere",
+          "text": "Yeah, that’s right - we mean no harm, we just want to see tomorrow."
+        }
+      ]
+    },
+    {
+      "id": "a4-margiela",
+      "background": "4a.png",
+      "characters": [{ "name": "", "sprite": "margiela.png" }],
+      "dialogue": [
+        {
+          "speaker": "${name}",
+          "text": "Your stares mean nothing, come find out what we’re made of!"
+        },
+        {
+          "speaker": "Marigela",
+          "text": "That’s what I like to hear! We can take them on, easily."
+        }
+      ]
+    },
+    {
+      "id": "a4-calpico",
+      "background": "4a.png",
+      "characters": [{ "name": "calpico", "sprite": "calpico.png" }],
+      "dialogue": [
+        {
+          "speaker": "Calpico",
+          "text": " I saw a gap near of the buildings where we can lose them."
+        },
+        {
+          "speaker": "Calpico",
+          "text": "Smart, I don’t think these guys are worth the trouble, but I don’t think they plan on leaving us alone."
+        }
+      ]
+    },
+    {
+      "id": "a4-darius",
+      "background": "4a.png",
+      "characters": [{ "name": "", "sprite": "darius.png" }],
+      "dialogue": [
+       
+        {
+          "speaker": "Darius",
+          "text": "Are you okay, ${name}? Just follow my lead; I got you, hehe."
+        }
+      ]
+    },
+    {
+      "id": "a4-gangus",
+      "background": "4a.png",
+      "characters": [{ "name": "", "sprite": "gangus.png" }],
+      "dialogue": [
+        {
+          "speaker": "",
+          "text": "*Gangus respects your silent, calculating nature.*"
+        },
+        {
+          "speaker": "Volfgangus Armadeus Raven Meowzart",
+          "text": "Hmm… "
+        }
+      ]
+    }
+  ]
+  
