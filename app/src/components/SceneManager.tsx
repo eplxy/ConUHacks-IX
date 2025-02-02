@@ -15,13 +15,14 @@ export default function SceneManager() {
 
   const handleChoice = (nextSceneId: string) => {
     const nextScene = scenes.find((scene: Scene) => scene.id === nextSceneId);
+    console.log("🚀 ~ handleChoice ~ nextScene:", nextScene)
     if (nextScene) {
       setCurrentScene(nextScene);
     } else {
       console.error(`Scene with id ${nextSceneId} not found`);
     }
   };
-  
+
   return (
     <Box
       className="scene"
