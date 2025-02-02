@@ -18,3 +18,10 @@
   padding: 20px;
   font-size: 18px;
 }
+
+.blur {
+  filter: blur(5px);
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+}

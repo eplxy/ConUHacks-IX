@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { Choice, Line } from "../models/models";
+import { Choice, Line, TraitTracker } from "../models/models";
 import "../style/dialoguecontainer.css";
 import { Box, Button } from "@mui/material";
 
 export interface IDialogueBoxProps {
   dialogue: Line[];
-  onChoice: (nextSceneId: string) => void;
+  onChoice: (choice: Choice) => void;
+  traitTracker?: TraitTracker;
 }
 
 export default function DialogueBox(props: IDialogueBoxProps) {
@@ -18,6 +19,12 @@ export default function DialogueBox(props: IDialogueBoxProps) {
   }, [props.dialogue]);
 
   const handleScreenClicked = () => {
+    // remove later, but notice how traits go up!
+    console.log(
+      "🚀 ~ handleScreenClicked ~ props.traitTracker:",
+      props.traitTracker
+    );
+
     if (index < props.dialogue.length - 1) {
       setCurrentLine(props.dialogue[index + 1]);
       setIndex(index + 1);
@@ -29,16 +36,17 @@ export default function DialogueBox(props: IDialogueBoxProps) {
 
   const handleOnChoiceClicked = (choice: Choice) => {
     setAreChoicesVisible(false);
-    props.onChoice(choice.next);
+    props.onChoice(choice);
   };
-
-  useEffect(() => {
-    console.log(props.dialogue);
-  }, [props.dialogue]);
 
   return (
     <Box
-      sx={{ position: "absolute", height: "100vh", width: "100vw" }}
+      sx={{
+        position: "absolute",
+        height: "100vh",
+        width: "100vw",
+        zIndex: 100,
+      }}
       onClick={handleScreenClicked}
     >
       <Box
@@ -59,7 +67,7 @@ export default function DialogueBox(props: IDialogueBoxProps) {
               variant="contained"
               key={idx}
               onClick={() => handleOnChoiceClicked(choice)}
-              sx={{ color: "#FFEED5" }}
+              sx={{ color: "#FFEED5", boxShadow: 3 }}
             >
               {choice.text}
             </Button>
@@ -71,10 +79,7 @@ export default function DialogueBox(props: IDialogueBoxProps) {
           alignSelf: "flex-end",
           width: "75%",
           height: "20%",
-          paddingLeft: 31,
-          paddingRight: 31,
-          paddingTop: 24,
-          paddingBottom: 24,
+          padding: "24px 36px",
           left: "10.5%",
           top: "70%",
           position: "absolute",
@@ -84,6 +89,7 @@ export default function DialogueBox(props: IDialogueBoxProps) {
           alignItems: "flex-start",
           gap: 10,
           display: "inline-flex",
+          boxShadow: "2px 2px 2px rgb(123, 104, 75)",
         }}
       >
         <div
@@ -101,44 +107,50 @@ export default function DialogueBox(props: IDialogueBoxProps) {
         >
           <div className="dialogue-text">
             {currentLine && (
-              <p style={{ userSelect: "none" }}>{currentLine.text}</p>
+              <p style={{ userSelect: "none", marginTop: "6px" }}>
+                {currentLine.text}
+              </p>
             )}
           </div>
         </div>
       </div>
-      <div
-        style={{
-          width: 175,
-          height: 60,
-          paddingLeft: 51,
-          paddingRight: 51,
-          paddingTop: 18,
-          paddingBottom: 18,
-          left: "3%",
-          top: "62%",
-          position: "absolute",
-          transform: "rotate(-3deg)",
-          transformOrigin: "0 0",
-          background: "#5A755A",
-          borderRadius: 20,
-          justifyContent: "center",
-          alignItems: "center",
-          gap: 10,
-          display: "inline-flex",
-        }}
-      >
+      {currentLine?.speaker && (
         <div
-          className="dialogue-text"
           style={{
-            textAlign: "center",
-            color: "#FFEED5",
-            fontSize: 28,
-            wordWrap: "break-word",
+            width: 175,
+            height: 60,
+            paddingLeft: 51,
+            paddingRight: 51,
+            paddingTop: 18,
+            paddingBottom: 18,
+            left: "3%",
+            top: "62%",
+            position: "absolute",
+            transform: "rotate(-3deg)",
+            transformOrigin: "0 0",
+            background: "#5A755A",
+            borderRadius: 20,
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 10,
+            display: "inline-flex",
+            boxShadow: "2px 2px 2px rgb(57, 78, 57)",
           }}
         >
-          {currentLine?.speaker}
+          <div
+            className="dialogue-text"
+            style={{
+              userSelect: "none",
+              textAlign: "center",
+              color: "#FFEED5",
+              fontSize: 28,
+              wordWrap: "break-word",
+            }}
+          >
+            {currentLine?.speaker}
+          </div>
         </div>
-      </div>
+      )}
     </Box>
   );
 }
