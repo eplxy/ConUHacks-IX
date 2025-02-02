@@ -1,27 +1,42 @@
 [
-    {
-      "id": "scene1",
-      "background": "/bg1.jpg",
-      "characters": [{ "name": "Alice", "sprite": "/alice.png", "position": "left" }],
-      "dialogue": [
-        { "speaker": "Alice", "text": "Welcome to the visual novel!" },
-        { "speaker": "Alice", "text": "Make a choice.", "choices": [
-          { "text": "Go left", "next": "scene2" },
-          { "text": "Go right", "next": "scene3" }
-        ]}
-      ]
-    },
-    {
-      "id": "scene2",
-      "background": "/bg2.jpg",
-      "characters": [{ "name": "Alice", "sprite": "/alice.png", "position": "center" }],
-      "dialogue": [{ "speaker": "Alice", "text": "You went left!" }]
-    },
-    {
-      "id": "scene3",
-      "background": "/bg3.jpg",
-      "characters": [{ "name": "Alice", "sprite": "/alice.png", "position": "right" }],
-      "dialogue": [{ "speaker": "Alice", "text": "You went right!" }]
-    } 
-  ]
-  
+  {
+    "id": "scene1",
+    "background": "/picture.png",
+    "characters": [
+      { "name": "Alice", "sprite": "/alice.png", "position": "left" }
+    ],
+    "dialogue": [
+      { "speaker": "Alice", "text": "Welcome to the visual novel!" },
+      {
+        "speaker": "Alice",
+        "text": "Make a choice.",
+        "choices": [
+          { "text": "Eat the food immediately", "next": "scene2" },
+          { "text": "Hiss at the human", "next": "scene2" },
+          {
+            "text": "Wait for the human to leave and then eat",
+            "next": "scene2"
+          },
+          { "text": "Run away immediately", "next": "scene2" },
+          { "text": "Refuse to eat at all", "next": "scene2" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scene2",
+    "background": "/bg2.jpg",
+    "characters": [
+      { "name": "Alice", "sprite": "/alice.png", "position": "center" }
+    ],
+    "dialogue": [{ "speaker": "Alice", "text": "You went left!" }]
+  },
+  {
+    "id": "scene3",
+    "background": "/bg3.jpg",
+    "characters": [
+      { "name": "Alice", "sprite": "/alice.png", "position": "right" }
+    ],
+    "dialogue": [{ "speaker": "Alice", "text": "You went right!" }]
+  }
+]
