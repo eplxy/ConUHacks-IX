@@ -15,7 +15,7 @@ export default function SceneManager() {
 
   const handleChoice = (nextSceneId: string) => {
     const nextScene = scenes.find((scene: Scene) => scene.id === nextSceneId);
-    console.log("🚀 ~ handleChoice ~ nextScene:", nextScene)
+    console.log("🚀 ~ handleChoice ~ nextScene:", nextScene);
     if (nextScene) {
       setCurrentScene(nextScene);
     } else {
@@ -26,7 +26,6 @@ export default function SceneManager() {
   return (
     <Box
       className="scene"
-      // style={{ backgroundImage: `url(${currentScene.background})` }}
       style={{
         position: "relative",
         width: "100%",
@@ -40,17 +39,17 @@ export default function SceneManager() {
       }}
       sx={{ alignItems: "flex-end" }}
     >
-      {currentScene.characters?.map((char) => (
-        <img
-          style={{ position: "absolute",
-            height: "100%",
-            right: "10%"
-           }}
-          key={char.name}
-          src={`${DEFAULT_CHARACTERS_FOLDER_PATH}${char.sprite}`}
-          className={`character ${char.position}`}
-        />
-      ))}
+      {currentScene.characters?.map(
+        (char) =>
+          char.sprite && (
+            <img
+              style={{ position: "absolute", height: "100%", right: "10%" }}
+              key={char.name}
+              src={`${DEFAULT_CHARACTERS_FOLDER_PATH}${char.sprite}`}
+              className={`character ${char.position}`}
+            />
+          )
+      )}
       <DialogueBox dialogue={currentScene.dialogue} onChoice={handleChoice} />
     </Box>
   );

@@ -25,18 +25,14 @@
   },
   {
     "id": "scene2",
-    "background": "/bg2.jpg",
-    "characters": [
-      { "name": "Alice", "sprite": "/alice.png", "position": "center" }
-    ],
+    "background": "bg.png",
+    "characters": [{ "name": "Alice", "sprite": "", "position": "center" }],
     "dialogue": [{ "speaker": "Alice", "text": "You went left!" }]
   },
   {
     "id": "scene3",
     "background": "/bg3.jpg",
-    "characters": [
-      { "name": "Alice", "sprite": "/alice.png", "position": "right" }
-    ],
+    "characters": [{ "name": "Alice", "sprite": "", "position": "right" }],
     "dialogue": [{ "speaker": "Alice", "text": "You went right!" }]
   }
 ]
