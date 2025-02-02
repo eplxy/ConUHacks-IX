@@ -798,17 +798,17 @@
           {
             "text": "Analyze the situation and find an escape route.",
             "next": "a4-calpico",
-            "traitChanges": [{ "trait": 1, "change": 1 }]
+            "traitChanges": [{ "trait": 3, "change": 1 }]
           },
           {
             "text": "Puff up and challenge them outright.",
             "next": "a4-margiela",
-            "traitChanges": [{ "trait": 3, "change": 1 }]
+            "traitChanges": [{ "trait": 2, "change": 1 }]
           },
           {
             "text": "Try to de-escalate and talk your way out.",
             "next": "a4-cashmere",
-            "traitChanges": [{ "trait": 2, "change": 1 }]
+            "traitChanges": [{ "trait": 1, "change": 1 }]
           }
         ]
       }
