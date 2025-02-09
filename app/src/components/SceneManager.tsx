@@ -5,6 +5,7 @@ import { Choice, Scene, TraitTracker, TraitChange } from "../models/models";
 import { Box } from "@mui/material";
 import "../style/bounce.css";
 import UserNameDialog from "./UserNameDialog";
+import { useNavigate } from "react-router-dom";
 
 const scenes: Scene[] = scenesData as Scene[];
 
@@ -19,6 +20,8 @@ export default function SceneManager() {
   const [name, setName] = useState<string>("");
   const [isUserNameDialogOpen, setIsUserNameDialogOpen] =
     useState<boolean>(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (currentScene.background) {
@@ -104,6 +107,8 @@ export default function SceneManager() {
     );
     if (nextScene) {
       setCurrentScene(nextScene);
+    } else if (currentScene.nextSceneId === "results") {
+      navigate("/results", { state: { traitTracker: userTraits, name: name } });
     }
   };
 

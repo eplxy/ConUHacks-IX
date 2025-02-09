@@ -999,6 +999,7 @@
   {
     "id": "a5-cashmere",
     "background": "5a.png",
+    "nextSceneId":"results",
     "characters": [
       {
         "name": "Cashmere",
@@ -1028,6 +1029,7 @@
   {
     "id": "a5-margiela",
     "background": "5a.png",
+    "nextSceneId":"results",
     "characters": [
       {
         "name": "",
@@ -1052,6 +1054,7 @@
   {
     "id": "a5-calpico",
     "background": "5a.png",
+    "nextSceneId":"results",
     "characters": [
       {
         "name": "calpico",
@@ -1082,6 +1085,7 @@
   {
     "id": "a5-darius",
     "background": "5a.png",
+    "nextSceneId":"results",
     "characters": [
       {
         "name": "",
@@ -1107,6 +1111,7 @@
   {
     "id": "a5-gangus",
     "background": "5a.png",
+    "nextSceneId":"results",
     "characters": [
       {
         "name": "",
