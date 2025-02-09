@@ -57,7 +57,7 @@ export default function MainMenu() {
           <Box className="popup-content">
             <h2 className="text-2xl font-bold">Developed by:</h2>
             <p className="mt-2">
-              no govvies here!
+              eplxy, maisonwells, maovxxo, relicx____, sayakult
             </p>
             <Button
               onClick={() => setShowCredits(false)}

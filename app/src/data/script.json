@@ -1,5 +1,17 @@
 [
   {
+    "id": "prologue",
+    "background": "",
+    "characters": [{ "sprite": "" }],
+    "dialogue": [
+      {
+        "speaker": "",
+        "text": "(You are a recently abandoned cat, looking to survive on the outside...)"
+      }
+    ],
+    "nextSceneId": "a1-s1"
+  },
+  {
     "id": "a1-s1",
     "background": "a1-b1.png",
     "characters": [
@@ -8,10 +20,6 @@
       }
     ],
     "dialogue": [
-      {
-        "speaker": "NicoRobinzzz",
-        "text": "hi chat!"
-      },
       {
         "speaker": "",
         "text": "It's my first time touching the grass. It always looked so soft through the glass, but yet… it's so prickly"
@@ -454,7 +462,7 @@
   {
     "id": "a2-cashmere",
     "background": "2a.png",
-    "nextSceneId":"a3",
+    "nextSceneId": "a2-end",
     "characters": [{ "name": "Cashmere", "sprite": "cashmere.png" }],
     "dialogue": [
       {
@@ -469,7 +477,7 @@
   },
   {
     "id": "a2-margiela",
-    "nextSceneId":"a3",
+    "nextSceneId": "a2-end",
     "background": "2a.png",
     "characters": [{ "name": "", "sprite": "margiela.png" }],
     "dialogue": [
@@ -486,7 +494,7 @@
   {
     "id": "a2-calpico",
     "background": "2a.png",
-    "nextSceneId":"a3",
+    "nextSceneId": "a2-end",
     "characters": [{ "name": "calpico", "sprite": "calpico.png" }],
     "dialogue": [
       {
@@ -502,7 +510,7 @@
   {
     "id": "a2-darius",
     "background": "2a.png",
-    "nextSceneId":"a3",
+    "nextSceneId": "a2-end",
     "characters": [{ "name": "", "sprite": "darius.png" }],
     "dialogue": [
       {
@@ -518,189 +526,7 @@
   {
     "id": "a2-gangus",
     "background": "2a.png",
-    "nextSceneId":"a3",
-    "characters": [{ "name": "", "sprite": "gangus.png" }],
-    "dialogue": [
-      {
-        "speaker": "",
-        "text": "*Gangus, from a distance, respects your discipline and endurance.*"
-      },
-      {
-        "speaker": "Volfgangus Armadeus Raven Meowzart",
-        "text": "I love the rain. "
-      }
-    ]
-  },
-
-  {
-    "id": "a3",
-    "background": "3a.png",
-    "characters": [
-      {
-        "name": "Marigela",
-        "sprite": "margiela.png"
-      }
-    ],
-    "dialogue": [
-      {
-        "speaker": "Margiela",
-        "text": "The sun is starting to set..."
-      },
-      {
-        "newSprite": "darius.png",
-        "speaker": "Darius",
-        "text": "Woah! It is! Cool find Margiela!"
-      },
-      {
-        "newSprite": "calpico.png",
-        "speaker": "Calpico",
-        "text": "It is not that hard to notice Darius. You should be more aware of your surroundings."
-      },
-      {
-        "newSprite": "darius.png",
-        "speaker": "Darius",
-        "text": "Yes Calpico! You’re a smart fella!"
-      },
-      {
-        "newSprite": "cashmere.png",
-        "speaker": "Cashmere",
-        "text": "Honestly, today was really great! You’re fun to be around ${name}, I hope you’ll be staying around more!"
-      },
-      {
-        "newSprite": "gangus.png",
-        "speaker": "Volfgangus Armadeus Raven Meowzart",
-        "text": "*Grunts*"
-      },
-      {
-        "newSprite": "darius.png",
-        "speaker": "Darius",
-        "text": "Gangus says he thinks you’re cool!"
-      },
-      {
-        "newSprite": "",
-        "speaker": "",
-        "text": "Thank you for helping me out!"
-      },
-      {
-        "newSprite": "calpico.png",
-        "speaker": "Calpico",
-        "text": "Do you guys smell that? Smells like the rain’s coming"
-      },
-      {
-        "newSprite": "darius.png",
-        "speaker": "Darius",
-        "text": "Uh oh, the sky is getting grey! We need to start finding shelter!"
-      },
-      {
-        "newSprite": "cashmere.png",
-        "speaker": "Cashmere",
-        "text": "He’s right, quick ${name}, what do we do?"
-      },
-      {
-        "speaker": "",
-        "text": "You look up at the sky and notice the big clouds coming your way. What do you do?",
-        "choices": [
-          {
-            "text": "Stay out in the rain, staring at the sky.",
-            "next": "a3-gangus",
-            "traitChanges": [{ "trait": 5, "change": 1 }]
-          },
-          {
-            "text": "Panic, get lost, and sleep in an exposed alley.",
-            "next": "a3-darius",
-            "traitChanges": [{ "trait": 4, "change": 1 }]
-          },
-          {
-            "text": "Curl up in a cozy spot under a tree.",
-            "next": "a3-cashmere",
-            "traitChanges": [{ "trait": 1, "change": 1 }]
-          },
-          {
-            "text": "Find the driest, safest, and most structurally sound shelter.",
-            "next": "a3-calpico",
-            "traitChanges": [{ "trait": 3, "change": 1 }]
-          },
-          {
-            "text": "Claim a dry crate and push anyone else out",
-            "next": "a3-margiela",
-            "traitChanges": [{ "trait": 2, "change": 1 }]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "a3-cashmere",
-    "background": "3a.png",
-    "nextSceneId": "a3-end",
-    "characters": [{ "name": "Cashmere", "sprite": "cashmere.png" }],
-    "dialogue": [
-      {
-        "speaker": "",
-        "text": "*Cashmere purrs, happy that you’re together.*"
-      },
-      {
-        "speaker": "Cashmere",
-        "text": "Oh, we chose the same spot. Nice to see you again!",
-        "nextSceneId": "a3-end"
-      }
-    ]
-  },
-  {
-    "id": "a3-margiela",
-    "background": "3a.png",
-    "nextSceneId": "a3-end",
-    "characters": [{ "name": "", "sprite": "margiela.png" }],
-    "dialogue": [
-      {
-        "speaker": "",
-        "text": "*Margiela smirks*"
-      },
-      {
-        "speaker": "Marigela",
-        "text": "Now that’s how you get what you want.",
-        "nextSceneId": "a3-end"
-      }
-    ]
-  },
-  {
-    "id": "a3-calpico",
-    "background": "3a.png",
-    "nextSceneId": "a3-end",
-    "characters": [{ "name": "calpico", "sprite": "calpico.png" }],
-    "dialogue": [
-      {
-        "speaker": "",
-        "text": "*Calpico nods, impressed by your logic.*"
-      },
-      {
-        "speaker": "Calpico",
-        "text": "Well Done. You learn fast.",
-        "nextSceneId": "a3-end"
-      }
-    ]
-  },
-  {
-    "id": "a3-darius",
-    "background": "3a.png",
-    "nextSceneId": "a3-end",
-    "characters": [{ "name": "", "sprite": "darius.png" }],
-    "dialogue": [
-      {
-        "speaker": "",
-        "text": "Darius finds you later, relating to your struggle."
-      },
-      {
-        "speaker": "Darius",
-        "text": "You’ll be okay. Let’s go find the others.",
-        "nextSceneId": "a3-end"
-      }
-    ]
-  },
-  {
-    "id": "a3-gangus",
-    "background": "3a.png",
-    "nextSceneId": "a3-end",
+    "nextSceneId": "a2-end",
     "characters": [{ "name": "", "sprite": "gangus.png" }],
     "dialogue": [
       {
@@ -714,14 +540,14 @@
     ]
   },
   {
-    "id": "a3-end",
-    "background": "3b.png",
+    "id": "a2-end",
+    "background": "2b.png",
+    "nextSceneId": "a3",
     "characters": [{ "name": "", "sprite": "" }],
-    "nextSceneId":"a4",
     "dialogue": [
       {
         "speaker": "",
-        "text": "As the day rolls by and night falls, the sound of rain and cars driving through the streets near you keep you company. "
+        "text": "As the day rolls by and night falls, the sound of rain and cars driving through the streets near you keep you company."
       },
       {
         "speaker": "",
@@ -729,10 +555,9 @@
       }
     ]
   },
-
   {
-    "id": "a4",
-    "background": "4a.png",
+    "id": "a3",
+    "background": "3a.png",
     "characters": [
       {
         "name": "Marigela",
@@ -740,6 +565,14 @@
       }
     ],
     "dialogue": [
+      {
+        "speaker": "",
+        "text": "With the sun rising, tension rises among the group as you awaken to the sounds of hissing and growls."
+      },
+      {
+        "speaker": "",
+        "text": "Woken from your slumber, you see a group of meaner, more territorial strays approach, eyeing your group aggressively."
+      },
       {
         "speaker": "Volfgangus Armadeus Raven Meowzart",
         "text": "*Hisses* Leave! This is ours!"
@@ -791,27 +624,27 @@
         "choices": [
           {
             "text": "Step back in the shadows, watching silently.",
-            "next": "a4-gangus",
+            "next": "a3-gangus",
             "traitChanges": [{ "trait": 5, "change": 1 }]
           },
           {
             "text": "Panic and freeze, unsure what to do.",
-            "next": "a4-darius",
+            "next": "a3-darius",
             "traitChanges": [{ "trait": 4, "change": 1 }]
           },
           {
             "text": "Analyze the situation and find an escape route.",
-            "next": "a4-calpico",
+            "next": "a3-calpico",
             "traitChanges": [{ "trait": 3, "change": 1 }]
           },
           {
             "text": "Puff up and challenge them outright.",
-            "next": "a4-margiela",
+            "next": "a3-margiela",
             "traitChanges": [{ "trait": 2, "change": 1 }]
           },
           {
             "text": "Try to de-escalate and talk your way out.",
-            "next": "a4-cashmere",
+            "next": "a3-cashmere",
             "traitChanges": [{ "trait": 1, "change": 1 }]
           }
         ]
@@ -819,9 +652,9 @@
     ]
   },
   {
-    "id": "a4-cashmere",
-    "background": "4a.png",
-    "nextSceneId":"a5",
+    "id": "a3-cashmere",
+    "background": "2a.png",
+    "nextSceneId": "a5",
     "characters": [{ "name": "Cashmere", "sprite": "cashmere.png" }],
     "dialogue": [
       {
@@ -835,9 +668,9 @@
     ]
   },
   {
-    "id": "a4-margiela",
-    "background": "4a.png",
-    "nextSceneId":"a5",
+    "id": "a3-margiela",
+    "background": "2a.png",
+    "nextSceneId": "a5",
     "characters": [{ "name": "", "sprite": "margiela.png" }],
     "dialogue": [
       {
@@ -851,9 +684,9 @@
     ]
   },
   {
-    "id": "a4-calpico",
-    "background": "4a.png",
-    "nextSceneId":"a5",
+    "id": "a3-calpico",
+    "background": "2a.png",
+    "nextSceneId": "a5",
     "characters": [{ "name": "calpico", "sprite": "calpico.png" }],
     "dialogue": [
       {
@@ -867,9 +700,9 @@
     ]
   },
   {
-    "id": "a4-darius",
-    "background": "4a.png",
-    "nextSceneId":"a5",
+    "id": "a3-darius",
+    "background": "2a.png",
+    "nextSceneId": "a5",
     "characters": [{ "name": "", "sprite": "darius.png" }],
     "dialogue": [
       {
@@ -879,9 +712,9 @@
     ]
   },
   {
-    "id": "a4-gangus",
-    "background": "4a.png",
-    "nextSceneId":"a5",
+    "id": "a3-gangus",
+    "background": "2a.png",
+    "nextSceneId": "a5",
     "characters": [{ "name": "", "sprite": "gangus.png" }],
     "dialogue": [
       {
@@ -896,9 +729,9 @@
   },
 
   {
-    "id": "a5",
-    "background": "5a.png",
-    "nextSceneId": "a5-2",
+    "id": "a4",
+    "background": "4a.png",
+    "nextSceneId": "a4-2",
     "characters": [
       {
         "name": "",
@@ -957,8 +790,8 @@
     ]
   },
   {
-    "id": "a5-2",
-    "background": "5b.png",
+    "id": "a4-2",
+    "background": "4b.png",
     "characters": [
       {
         "name": "Marigela",
@@ -973,28 +806,28 @@
         "choices": [
           {
             "text": "Miss your chance, get frustrated, and sulk.",
-            "next": "a5-darius",
+            "next": "a4-darius",
             "traitChanges": [{ "trait": 4, "change": 1 }]
           },
           {
             "text": "Refuse to hunt, preferring to scavenge instead.",
-            "next": "a5-gangus",
+            "next": "a4-gangus",
             "traitChanges": [{ "trait": 5, "change": 1 }]
           },
           {
             "text": "Charge at the prey without thinking, relying on brute force.",
-            "next": "a5-margiela",
+            "next": "a4-margiela",
             "traitChanges": [{ "trait": 2, "change": 1 }]
           },
 
           {
             "text": "Strategically plan and trap the prey.",
-            "next": "a5-calpico",
+            "next": "a4-calpico",
             "traitChanges": [{ "trait": 3, "change": 1 }]
           },
           {
             "text": "Try hunting with Cashmere’s help, even if you’re clumsy",
-            "next": "a5-cashmere",
+            "next": "a4-cashmere",
             "traitChanges": [{ "trait": 1, "change": 1 }]
           }
         ]
@@ -1002,9 +835,9 @@
     ]
   },
   {
-    "id": "a5-cashmere",
-    "background": "5b.png",
-    "nextSceneId":"a6",
+    "id": "a4-cashmere",
+    "background": "4b.png",
+    "nextSceneId": "a5",
     "characters": [{ "name": "Cashmere", "sprite": "cashmere.png" }],
     "dialogue": [
       {
@@ -1018,9 +851,9 @@
     ]
   },
   {
-    "id": "a5-margiela",
-    "background": "5b.png",
-    "nextSceneId":"a6",
+    "id": "a4-margiela",
+    "background": "4b.png",
+    "nextSceneId": "a5",
     "characters": [{ "name": "", "sprite": "margiela.png" }],
     "dialogue": [
       {
@@ -1034,9 +867,9 @@
     ]
   },
   {
-    "id": "a5-calpico",
-    "background": "5b.png",
-    "nextSceneId":"a6",
+    "id": "a4-calpico",
+    "background": "4b.png",
+    "nextSceneId": "a5",
     "characters": [{ "name": "calpico", "sprite": "calpico.png" }],
     "dialogue": [
       {
@@ -1050,9 +883,9 @@
     ]
   },
   {
-    "id": "a5-darius",
-    "background": "5b.png",
-    "nextSceneId":"a6",
+    "id": "a4-darius",
+    "background": "4b.png",
+    "nextSceneId": "a5",
     "characters": [{ "name": "", "sprite": "darius.png" }],
     "dialogue": [
       {
@@ -1066,9 +899,9 @@
     ]
   },
   {
-    "id": "a5-gangus",
-    "background": "5b.png",
-    "nextSceneId":"a6",
+    "id": "a4-gangus",
+    "background": "4b.png",
+    "nextSceneId": "a5",
     "characters": [{ "name": "", "sprite": "gangus.png" }],
     "dialogue": [
       {
@@ -1083,8 +916,8 @@
   },
 
   {
-    "id": "a6",
-    "background": "6a.png",
+    "id": "a5",
+    "background": "5a.png",
     "characters": [
       {
         "name": "",
@@ -1111,7 +944,7 @@
         "choices": [
           {
             "text": "Hiss and scratch, refusing to go back. ",
-            "next": "a6-margiela",
+            "next": "a5-margiela",
             "traitChanges": [
               {
                 "trait": 2,
@@ -1121,7 +954,7 @@
           },
           {
             "text": "Observe them quietly, analyzing their sincerity.",
-            "next": "a6-calpico",
+            "next": "a5-calpico",
             "traitChanges": [
               {
                 "trait": 3,
@@ -1131,7 +964,7 @@
           },
           {
             "text": "Freeze up, overcome with anxiety.",
-            "next": "a6-darius",
+            "next": "a5-darius",
             "traitChanges": [
               {
                 "trait": 4,
@@ -1141,7 +974,7 @@
           },
           {
             "text": "Silently walk away without a word. ",
-            "next": "a6-gangus",
+            "next": "a5-gangus",
             "traitChanges": [
               {
                 "trait": 5,
@@ -1151,7 +984,7 @@
           },
           {
             "text": "Run into their arms, forgiving them instantly.",
-            "next": "a6-cashmere",
+            "next": "a5-cashmere",
             "traitChanges": [
               {
                 "trait": 1,
@@ -1164,8 +997,8 @@
     ]
   },
   {
-    "id": "a6-cashmere",
-    "background": "6a.png",
+    "id": "a5-cashmere",
+    "background": "5a.png",
     "characters": [
       {
         "name": "Cashmere",
@@ -1174,18 +1007,27 @@
     ],
     "dialogue": [
       {
-        "speaker": "",
-        "text": "Ending: 'The Housecat's Heart' – You choose warmth and trust, hoping your owner has changed."
+        "speaker": "Cashmere",
+        "text": "(Cashmere nuzzles you, purring) That’s a risk I’d take too."
       },
+
       {
         "speaker": "Cashmere",
         "text": "It was nice to meet you ${name}!"
+      },
+      {
+        "speaker": "",
+        "text": "You return home, falling back into the comforts of indoor life, believing that love is worth second chances."
+      },
+      {
+        "speaker": "",
+        "text": "Ending: 'The Housecat's Heart' – You choose warmth and trust, hoping your owner has changed."
       }
     ]
   },
   {
-    "id": "a6-margiela",
-    "background": "6a.png",
+    "id": "a5-margiela",
+    "background": "5a.png",
     "characters": [
       {
         "name": "",
@@ -1194,18 +1036,22 @@
     ],
     "dialogue": [
       {
-        "speaker": "",
-        "text": "Ending: 'The Untamed King' – You’ve found freedom and power, and you’ll never let anyone take it from you."
+        "speaker": "Margiela",
+        "text": "(Margiela cackles.) No one who throws you away deserves you."
       },
       {
         "speaker": "Margiela",
-        "text": "No one who throws you away deserves you."
+        "text": "You stand your ground, claiming the streets as your true home."
+      },
+      {
+        "speaker": "",
+        "text": "Ending: 'The Untamed King' – You’ve found freedom and power, and you’ll never let anyone take it from you."
       }
     ]
   },
   {
-    "id": "a6-calpico",
-    "background": "6a.png",
+    "id": "a5-calpico",
+    "background": "5a.png",
     "characters": [
       {
         "name": "calpico",
@@ -1213,19 +1059,29 @@
       }
     ],
     "dialogue": [
-      {
-        "speaker": "",
-        "text": "Ending: 'The Negotiator’s Return' – You make your choice based on logic, ensuring it’s safe before trusting again."
-      },
+      { "speaker": "Calpico", "text": "(Calpico watches beside you.)" },
       {
         "speaker": "Calpico",
         "text": "What’s your conclusion?"
+      },
+      {
+        "speaker": "",
+        "text": "You test them, waiting to see if they truly regret abandoning you."
+      },
+      {
+        "speaker": "",
+        "text": "If they prove themselves over time, you cautiously return."
+      },
+
+      {
+        "speaker": "",
+        "text": "Ending: 'The Negotiator’s Return' – You make your choice based on logic, ensuring it’s safe before trusting again."
       }
     ]
   },
   {
-    "id": "a6-darius",
-    "background": "6a.png",
+    "id": "a5-darius",
+    "background": "5a.png",
     "characters": [
       {
         "name": "",
@@ -1233,19 +1089,24 @@
       }
     ],
     "dialogue": [
-      {
-        "speaker": "",
-        "text": "Ending: 'The Ghost of the Past' – You’re haunted by the ‘what if,’ but the fear of being abandoned again stops you from returning."
-      },
+      { "speaker": "Darius", "text": "*Darius stays close.*" },
       {
         "speaker": "Darius",
         "text": "It's okay to be scared."
+      },
+      {
+        "speaker": "Darius",
+        "text": "You hesitate too long, unable to decide, and they eventually leave, assuming you’ve moved on."
+      },
+      {
+        "speaker": "",
+        "text": "Ending: 'The Ghost of the Past' – You’re haunted by the ‘what if,’ but the fear of being abandoned again stops you from returning."
       }
     ]
   },
   {
-    "id": "a6-gangus",
-    "background": "6a.png",
+    "id": "a5-gangus",
+    "background": "5a.png",
     "characters": [
       {
         "name": "",
@@ -1254,8 +1115,13 @@
     ],
     "dialogue": [
       {
-        "speaker": "Volfgangus Armadeus Raven Meowzart",
-        "text": "You already know the answer."
+        "speaker": "Gangus",
+        "text": "(Gangus' voice is low.) You already know the answer."
+      },
+
+      {
+        "speaker": "Gangus",
+        "text": "You don’t need to hiss, fight, or wait. You just walk away, disappearing into the streets."
       },
       {
         "speaker": "",
