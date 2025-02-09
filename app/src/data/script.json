@@ -9,6 +9,10 @@
     ],
     "dialogue": [
       {
+        "speaker": "NicoRobinzzz",
+        "text": "hi chat!"
+      },
+      {
         "speaker": "",
         "text": "It's my first time touching the grass. It always looked so soft through the glass, but yet… it's so prickly"
       },
@@ -771,7 +775,7 @@
         "text": " I don’t think I appreciate the tone there, buddy. See, the way I see it, this place could easily be our new home."
       },
       {
-        "speaker": "${name}",
+        "speaker": "",
         "text": "Oh no!"
       },
       {
@@ -1107,7 +1111,7 @@
         "choices": [
           {
             "text": "Hiss and scratch, refusing to go back. ",
-            "next": "a6-Margiela",
+            "next": "a6-margiela",
             "traitChanges": [
               {
                 "trait": 2,
@@ -1117,7 +1121,7 @@
           },
           {
             "text": "Observe them quietly, analyzing their sincerity.",
-            "next": "a6-Calpico",
+            "next": "a6-calpico",
             "traitChanges": [
               {
                 "trait": 3,

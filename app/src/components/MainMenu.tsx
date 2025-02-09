@@ -57,8 +57,7 @@ export default function MainMenu() {
           <Box className="popup-content">
             <h2 className="text-2xl font-bold">Developed by:</h2>
             <p className="mt-2">
-              Duc Vinh Steven Lam, Mahoor Marashi, Altamash (Wells) Sheikh,
-              Martin Calero
+              no govvies here!
             </p>
             <Button
               onClick={() => setShowCredits(false)}
